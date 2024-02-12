@@ -21,8 +21,7 @@ data from the prior lab, so you'll need to create a new type.
 
 You might be tempted to do something simple like
 
-  type person = { name : string; favorite : string; birthday : string }
-                  ;;
+  type person = { name : string; favorite : string; birthday : string } ;;
 
 Let's consider why this may not be appropriate by evaluating the type
 for each record field individually.
@@ -165,8 +164,8 @@ let make_color (r : int) (g : int) (b : int) : color =
 
 (*......................................................................
 Exercise 5: Write a function `rgb_of_color` that accepts a `color` and
-returns a 3-tuple of ints representing that color. This is trivial for
-`RGB` colors, but not quite so easy for the hard-coded `Simple`
+returns a 3-tuple of integers representing that color. This is trivial
+for `RGB` colors, but not quite so easy for the hard-coded `Simple`
 colors. Fortunately, we've already provided RGB values for simple
 colors in the table above.
 ......................................................................*)
@@ -353,7 +352,7 @@ display a person's information. Try it out! *)
 (* display_person person -- Displays `person`'s name and birth date in
    a graphics window on a background of their favorite color. *)
 
-let display_person ({name; favorite; birthdate}) : unit =
+let display_person ({name; favorite; birthdate} : person) : unit =
   let open Graphics in
   open_graph "";
   resize_window 200 60;
