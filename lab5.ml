@@ -181,7 +181,8 @@ let rgb_of_color (c : color) : int * int * int =
      | Green   -> (  0, 255,   0)
      | Blue    -> (  0,   0, 255)
      | Indigo  -> ( 75,   0, 130)
-     | Violet  -> (240, 130, 240) ;;
+     | Violet  -> (240, 130, 240) 
+    ;;
 
 (*======================================================================
 Part 2: Dates as a record type
